@@ -1,5 +1,3 @@
-'use client'
-
 import { useRouter } from "next/navigation";
 
 export default async function Produto({ params }) {
@@ -32,9 +30,11 @@ export default async function Produto({ params }) {
     }
     return (
         <div>
-            <p>{produto.nome}</p>
-            <p>{produto.idade}</p>
-            <p>{produto.uf}</p>
+            <p>{produto.titulo}</p>
+            <p>{produto.data_cadastro}</p>
+            <p>{produto.preco}</p>
+            <p>{produto.descricao}</p>
+            <p>{produto.imagem}</p>
             <button onClick={e => e.preventDefault(remover())}>REMOVER</button>
 
         </div>
