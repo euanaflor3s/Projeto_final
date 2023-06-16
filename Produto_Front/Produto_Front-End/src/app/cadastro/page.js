@@ -48,7 +48,7 @@ export default function Cadastro() {
                 /><br/>
                 <input
                     type="text"
-                    placeholder='Preco:'
+                    placeholder='Preço:'
                     nome="preco"
                     onChange={e => setUF(e.target.value)}
                 /><br/>
