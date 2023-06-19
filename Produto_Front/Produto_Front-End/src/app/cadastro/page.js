@@ -34,40 +34,48 @@ export default function Cadastro() {
     return (
         <div className={styles.main}>
             <form  onSubmit={cadastrar}>
-                <input className='ana'
-                    type="text"
+
+                <center>
+
+                <input className={styles.ana}
+                    type="text"  
                     placeholder='Titulo'
                     nome="titulo"
                     onChange={e => setNome(e.target.value)}
                 /><br/>
-                <input className='ana'
+                <input className={styles.ana}
                     type="text"
                     placeholder='Data'
                     nome="data_cadastro"
                     onChange={e => setIdade(e.target.value)}
                 /><br/>
-                <input className='ana'
+                <input className={styles.ana}
                     type="text"
                     placeholder='Preço'
                     nome="preco"
                     onChange={e => setUF(e.target.value)}
                 /><br/>
-                <input className='ana'
+                <input className={styles.ana}
                     type="text"
                     placeholder='Descrição'
                     nome="descricao"
                     onChange={e => setIdade(e.target.value)}
                 /><br/>
-                <input className='ana'
+                <input className={styles.ana}
                     type="imagem"
                     placeholder='Imagem'
                     nome="imagem"
                     onChange={e => setIdade(e.target.value)}
                 /><br/>
-                <button type='submit' className='botao'>CADASTRAR</button> <br/><br/>
+
+                <button type='submit' className={styles.botao}>CADASTRAR</button> <br/><br/>
+
                 <div>
-                    <a href='/'>Voltar</a>
+                    <a className={styles.voltar} href='/'>Voltar</a>
                 </div>
+
+                </center>
+                
             </form>
         </div>
     );
