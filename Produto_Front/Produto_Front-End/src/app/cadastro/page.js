@@ -1,15 +1,15 @@
-'use client'
+"use client"
 import { useState } from 'react'
 import styles from '../page.module.css'
 import { useRouter } from 'next/navigation'
 
 export default function Cadastro() {
     const route = useRouter();
-    const [titulo, seTitulo] = useState();
-    const [data_cadastro, setData_cadastro] = useState();
-    const [preco, setPreco] = useState();
-    const [descricao, setDescricao] = useState();
-    const [imagem, setImagem] = useState();
+    const [titulo, setTitulo] = useState('');
+    const [data_cadastro, setData_cadastro] = useState('');
+    const [preco, setPreco] = useState('');
+    const [descricao, setDescricao] = useState('');
+    const [imagem, setImagem] = useState('');
 
 
     const cadastrar = (e) => {
@@ -21,8 +21,8 @@ export default function Cadastro() {
             preco: preco,
             descricao: descricao,
             imagem: imagem
-
         }
+
         const produtoJson = JSON.stringify(produto);
         fetch("http://localhost:3003/produto", {
             method: "POST",
@@ -41,31 +41,31 @@ export default function Cadastro() {
                     type="text"  
                     placeholder='Titulo'
                     nome="titulo"
-                    onChange={e => setNome(e.target.value)}
+                    onChange={e => setTitulo(e.target.value)}
                 /><br/>
                 <input className={styles.ana}
-                    type="text"
+                    type="date"
                     placeholder='Data'
                     nome="data_cadastro"
-                    onChange={e => setIdade(e.target.value)}
+                    onChange={e => setData_cadastro(e.target.value)}
                 /><br/>
                 <input className={styles.ana}
-                    type="text"
+                    type="number"
                     placeholder='Preço'
                     nome="preco"
-                    onChange={e => setUF(e.target.value)}
+                    onChange={e => setPreco(e.target.value)}
                 /><br/>
                 <input className={styles.ana}
                     type="text"
                     placeholder='Descrição'
                     nome="descricao"
-                    onChange={e => setIdade(e.target.value)}
+                    onChange={e => setDescricao(e.target.value)}
                 /><br/>
                 <input className={styles.ana}
-                    type="imagem"
+                    type="text"
                     placeholder='Imagem'
                     nome="imagem"
-                    onChange={e => setIdade(e.target.value)}
+                    onChange={e => setImagem(e.target.value)}
                 /><br/>
 
                 <button type='submit' className={styles.botao}>CADASTRAR</button> <br/><br/>

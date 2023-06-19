@@ -3,7 +3,9 @@ const path = require('path');
 const Produto = require("./models/produto");
 const cors= require('cors');
 const app = express();
+
 app.use(cors());
+
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -21,11 +23,9 @@ app.get('/produtos', async function(req, res){
   }
 });
 
-
-
 app.post('/produtos', async function(req, res){
   try {
-    var produto = await Produto.selectOne(req.body.id);
+    var produto = await Produto.insert(req.body.id);
     res.json(produto.rows[0]);
   } catch (error) {
     console.error('Erro ao buscar produtos:', error);
@@ -33,16 +33,6 @@ app.post('/produtos', async function(req, res){
   }
 });
 
-//Essa rota é do tipo post e funciona para inserir um produto
-app.post('/produto', async function(req,res){
-  try{
-    var produto = req.body
-    var produto = await Produto.insert(produto);
-    res.json(produto.rows)
-  }catch(error){
-    console.log("error")
-  }
-})
 //Essa rota é do tipo post e funciona para remover um produto
 app.delete('/produtos', async function(req, res){
   try {
