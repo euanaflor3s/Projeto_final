@@ -4,5 +4,12 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-color: blueviolet;
  }
+
+ .input{
+  border-radius: 10px;
+ }
+
+ 
  

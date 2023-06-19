@@ -9,7 +9,7 @@ class Produto {
     } catch (error) {
       console.error('Erro em select:', error);
       throw error;
-    }
+    }  
   }
   static async selectOne(id) {
     try {

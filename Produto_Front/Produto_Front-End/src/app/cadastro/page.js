@@ -34,37 +34,37 @@ export default function Cadastro() {
     return (
         <div className={styles.main}>
             <form  onSubmit={cadastrar}>
-                <input
+                <input className='ana'
                     type="text"
-                    placeholder='Titulo:'
+                    placeholder='Titulo'
                     nome="titulo"
                     onChange={e => setNome(e.target.value)}
                 /><br/>
-                <input
+                <input className='ana'
                     type="text"
-                    placeholder='Data_cadastro:'
+                    placeholder='Data'
                     nome="data_cadastro"
                     onChange={e => setIdade(e.target.value)}
                 /><br/>
-                <input
+                <input className='ana'
                     type="text"
-                    placeholder='Preço:'
+                    placeholder='Preço'
                     nome="preco"
                     onChange={e => setUF(e.target.value)}
                 /><br/>
-                <input
+                <input className='ana'
                     type="text"
-                    placeholder='Descricao:'
+                    placeholder='Descrição'
                     nome="descricao"
                     onChange={e => setIdade(e.target.value)}
                 /><br/>
-                <input
+                <input className='ana'
                     type="imagem"
-                    placeholder='Imagem:'
+                    placeholder='Imagem'
                     nome="imagem"
                     onChange={e => setIdade(e.target.value)}
                 /><br/>
-                <button type='submit'>Cadastrar</button>
+                <button type='submit' className='botao'>CADASTRAR</button> <br/><br/>
                 <div>
                     <a href='/'>Voltar</a>
                 </div>
