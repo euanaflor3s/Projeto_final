@@ -5,11 +5,11 @@ import { useRouter } from 'next/navigation'
 
 export default function Cadastro() {
     const route = useRouter();
-    const [titulo, setTitulo] = useState('');
-    const [data_cadastro, setData_cadastro] = useState('');
-    const [preco, setPreco] = useState('');
-    const [descricao, setDescricao] = useState('');
-    const [imagem, setImagem] = useState('');
+    const [titulo, setTitulo] = useState();
+    const [data_cadastro, setData_cadastro] = useState();
+    const [preco, setPreco] = useState();
+    const [descricao, setDescricao] = useState();
+    const [imagem, setImagem] = useState();
 
 
     const cadastrar = (e) => {
@@ -20,14 +20,14 @@ export default function Cadastro() {
             data_cadastro: data_cadastro,
             preco: preco,
             descricao: descricao,
-            imagem: imagem
-        }
+            imagem: imagem,
+          };
 
         const produtoJson = JSON.stringify(produto);
         fetch("http://localhost:3003/produto", {
             method: "POST",
             headers: { "content-Type": "application/json" },
-            body: produtoJson
+            body: produtoJson,
         }).then(function(){ route.push("/")}).catch(()=> console.log("Não foi possível cadastrar!"))
     }
 

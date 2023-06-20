@@ -2,6 +2,7 @@
 
 
 import { useRouter } from "next/navigation";
+import styles from './inicio.css'
 
 
 export default async function Produtos({ params }) {
@@ -37,7 +38,7 @@ export default async function Produtos({ params }) {
         }
     }
     return (
-        <div>
+        <div className={styles.div1}>
             <p>{produto.titulo}</p>
             <p>{produto.data_cadastro}</p>
             <p>{produto.preco}</p>

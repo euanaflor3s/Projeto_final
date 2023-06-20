@@ -5,6 +5,7 @@
   justify-content: center;
   height: 100vh;
   background-color: #79b7b4;
+  font-family: 'Courier New', Courier, monospace;
  }
 
  .ana::placeholder {
@@ -91,6 +92,51 @@
   color: gray;
 }
 
+.div1{
+  position: relative;
+  align-items: center; 
+}
 
- 
- 
+.img{
+  position: relative;
+  width: 50vh;
+  margin-left:40% ;
+}
+.lk{
+  text-decoration: none;
+  color: #455559;
+  text-transform: uppercase;
+  margin-left: 2%;
+}
+
+.title{
+  font-size: 2vw;
+  font-weight: bold ;
+  margin-left:50% ;
+}
+
+.principal{
+  position: relative;
+  align-items: center;
+}
+
+.bt{
+  margin-left: 50%;
+  position: relative;
+  align-items: center;
+
+  text-decoration: none;
+  color: #455559;
+}
+.data{
+  margin-left:40% ;
+}
+.desc{
+  margin-left:40% ;
+  width: 50vh;
+}
+
+.preco{
+  margin-left:40% ;
+}
+
